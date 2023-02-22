@@ -1,10 +1,10 @@
 function selectRef({ one, two, three, four, five, six }) {
 	console.log(players);
-	document.getElementById('oneRef').innerText = 'ONE';
-	document.getElementById('twoRef').innerText = 'TWO';
-	document.getElementById('threeRef').innerText = 'THREE';
-	document.getElementById('fourRef').innerText = 'FOUR';
-	document.getElementById('fiveRef').innerText = 'FIVE';
-	document.getElementById('sixRef').innerText = 'SIX';
+	document.getElementById('refOne').innerText = 'ONE';
+	document.getElementById('refTwo').innerText = 'TWO';
+	document.getElementById('refThree').innerText = 'THREE';
+	document.getElementById('refFour').innerText = 'FOUR';
+	document.getElementById('refFive').innerText = 'FIVE';
+	document.getElementById('refSix').innerText = 'SIX';
 	console.log('Done')
 }
