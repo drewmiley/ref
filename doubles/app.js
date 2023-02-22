@@ -1,7 +1,7 @@
 document.getElementById('run').onclick = () => run();
 
 const getSelectedValue = (id) => {
-	val e = document.getElementById(id);
+	const e = document.getElementById(id);
 	return e.value;
 }
 
