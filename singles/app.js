@@ -1,14 +1,9 @@
 document.getElementById('run').onclick = () => run();
 
-// TODO: getSelectedValue
-const getSelectedValue = () => {
-	return '';
+const getSelectedValue = (id) => {
+	val e = document.getElementById(id);
+	return e.value;
 }
-// const getCheckedValue = (checkedValue) =>
-//     [...document.getElementById(checkedValue).children]
-//         .find(d => d.checked)
-//         .id
-//         .replace(checkedValue, '');
 
 const run = () => {
     console.log('Running');
