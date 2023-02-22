@@ -1,4 +1,5 @@
 function selectRef({ one, two, three, four, five, six }) {
+	// TODO: Implement
 	console.log(players);
 	const onePlayer = players.find(player => player.initial == one);
 	const twoPlayer = players.find(player => player.initial == two);

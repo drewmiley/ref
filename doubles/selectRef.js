@@ -1,4 +1,5 @@
 function selectRef({ playedSix, refSix, one, two, three }) {
+	// TODO: Fix after singles works
 	console.log(players);
 	const playedSixPlayer = players.find(player => player.initial == playedSix);
 	const refSixPlayer = players.find(player => player.initial == refSix);

@@ -7,6 +7,7 @@ const players = [
 	player('JK', false),
 	player('ND', true),
 	player('PC', true),
+	// TODO: Need values for these two
 	player('MS', undefined),
 	player('SC', undefined)
 ]
