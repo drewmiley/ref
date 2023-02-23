@@ -41,11 +41,11 @@ function selectRef({ one, two, three, four, five, six }) {
 
 	const fullAllocation = initialAllocation.map((initial, index) => initial || getInitialsNotAllocatedJoinedUnlessPlayingFrame(initialsNotAllocatedFrame, cannotRefOptions[index]));
 
-	document.getElementById('refOne').innerText = fullAllocation[0];
-	document.getElementById('refTwo').innerText = fullAllocation[1];
-	document.getElementById('refThree').innerText = fullAllocation[2];
-	document.getElementById('refFour').innerText = fullAllocation[3];
-	document.getElementById('refFive').innerText = fullAllocation[4];
-	document.getElementById('refSix').innerText = fullAllocation[5];
+	document.getElementById('refOne').innerText = fullAllocation[0] || 'Random';
+	document.getElementById('refTwo').innerText = fullAllocation[1] || 'Random';
+	document.getElementById('refThree').innerText = fullAllocation[2] || 'Random';
+	document.getElementById('refFour').innerText = fullAllocation[3] || 'Random';
+	document.getElementById('refFive').innerText = fullAllocation[4] || 'Random';
+	document.getElementById('refSix').innerText = fullAllocation[5] || 'Random';
 	console.log('Done')
 }

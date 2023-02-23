@@ -1,3 +1,5 @@
+// TODO: Could add wouldLikeToRef as a tiebreaker for when there are two options?
+
 const player = (initial, preferenceBefore) => ({ initial, preferenceBefore })
 
 const players = [
