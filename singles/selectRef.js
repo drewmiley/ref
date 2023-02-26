@@ -40,13 +40,17 @@ function selectRef({ one, two, three, four, five, six }) {
 
 	const initialsNotAllocatedFrame = playing.map(player => player.initial).filter(initial => !initialAllocation.includes(initial));
 
-	const fullAllocation = initialAllocation.map((initial, index) => initial || getInitialsNotAllocatedJoinedUnlessPlayingFrame(initialsNotAllocatedFrame, cannotRefOptions[index]));
+	const fullAllocation = initialAllocation.map((initial, index) =>
+		initial ||
+		getInitialsNotAllocatedJoinedUnlessPlayingFrame(initialsNotAllocatedFrame, cannotRefOptions[index]) ||
+		players.filter(player => !cannotRefOptions[index].includes(player.initial)).map(player => player.initial).join('/')
+	);
 
-	document.getElementById('refOne').innerText = fullAllocation[0] || 'Random';
-	document.getElementById('refTwo').innerText = fullAllocation[1] || 'Random';
-	document.getElementById('refThree').innerText = fullAllocation[2] || 'Random';
-	document.getElementById('refFour').innerText = fullAllocation[3] || 'Random';
-	document.getElementById('refFive').innerText = fullAllocation[4] || 'Random';
-	document.getElementById('refSix').innerText = fullAllocation[5] || 'Random';
+	document.getElementById('refOne').innerText = fullAllocation[0];
+	document.getElementById('refTwo').innerText = fullAllocation[1];
+	document.getElementById('refThree').innerText = fullAllocation[2];
+	document.getElementById('refFour').innerText = fullAllocation[3];
+	document.getElementById('refFive').innerText = fullAllocation[4];
+	document.getElementById('refSix').innerText = fullAllocation[5];
 	console.log('Done')
 }
