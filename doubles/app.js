@@ -8,7 +8,7 @@ const getSelectedValue = (id) => {
 const run = () => {
     console.log('Running');
     const options = {
-    	playedSix: getSelectedValue('playedSix'),
+    	playSix: getSelectedValue('playSix'),
     	refSix: getSelectedValue('refSix'),
     	one: [getSelectedValue('oneOne'), getSelectedValue('oneTwo')],
     	two: [getSelectedValue('twoOne'), getSelectedValue('twoTwo')],
