@@ -1,7 +1,7 @@
 const getInitialAllocation = initialArray => {
 	if (!initialArray.length) return null;
 	if (initialArray.length == 1) return initialArray[0].initial;
-	if (initialArray.length == 2 && [0, 2].includes(initialArray.filter(player => player.wouldPreferToRef).length)) return Math.random < 0.5 ? initialArray[0].initial : initialArray[1].initial;
+	if (initialArray.length == 2 && [0, 2].includes(initialArray.filter(player => player.wouldPreferToRef).length)) return Math.random() < 0.5 ? initialArray[0].initial : initialArray[1].initial;
 	if (initialArray.length > 2 && initialArray.filter(player => player.wouldPreferToRef).length == 1) return initialArray.find(player => player.wouldPreferToRef).initial;
 }
 
@@ -39,8 +39,8 @@ function selectRef({ playSix, refSix, one, two, three }) {
 		players.filter(player => !cannotRefOptions[index].includes(player.initial)).map(player => player.initial).join('/')
 	);
 
-	document.getElementById('refOne').innerText = fullAllocation[0];
-	document.getElementById('refTwo').innerText = fullAllocation[1];
-	document.getElementById('refThree').innerText = fullAllocation[2];
+	document.getElementById('refOne').innerText = `${fullAllocation[0]}${initialAllocation[0] ? ' *' : ''}`;
+	document.getElementById('refTwo').innerText = `${fullAllocation[1]}${initialAllocation[1] ? ' *' : ''}`;
+	document.getElementById('refThree').innerText = `${fullAllocation[2]}${initialAllocation[2] ? ' *' : ''}`;
 	console.log('Done')
 }

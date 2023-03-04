@@ -5,11 +5,10 @@ const players = [
 	player('DM', false, true),
 	player('JC', true),
 	player('JK', false),
+	player('MS', true),
 	player('ND', true, true),
 	player('PC', true),
-	// TODO: Need values for these two
-	player('MS', undefined),
-	player('SC', undefined)
+	player('SC', true)
 ]
 
 console.log(players)
