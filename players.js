@@ -6,6 +6,7 @@ const players = [
 	player('JC', true),
 	player('JK', false),
 	player('MS', true),
+	player('NA', false),
 	player('ND', true, true),
 	player('PC', true),
 	player('SC', true)
