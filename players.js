@@ -6,7 +6,7 @@ const player = (initial, preferenceBeforeInit, wouldPreferToRef) => {
 	}
 }
 
-const players = [
+const players = () => [
 	player('DD', false),
 	player('DM', false, true),
 	player('DW', false),
@@ -19,4 +19,4 @@ const players = [
 	player('SF', false)
 ]
 
-console.log(players)
+console.log(players())

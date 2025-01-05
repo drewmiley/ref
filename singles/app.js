@@ -15,5 +15,6 @@ const run = () => {
     	five: getSelectedValue('five'),
     	six: getSelectedValue('six')
     }
-    selectRef(options);
+    const team = players();
+    selectRef(options, team);
 }

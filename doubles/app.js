@@ -14,5 +14,6 @@ const run = () => {
     	two: [getSelectedValue('twoOne'), getSelectedValue('twoTwo')],
     	three: [getSelectedValue('threeOne'), getSelectedValue('threeTwo')]
     }
-    selectRef(options);
+    const team = players();
+    selectRef(options, team);
 }
