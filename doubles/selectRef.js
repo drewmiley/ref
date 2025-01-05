@@ -8,7 +8,7 @@ const getInitialAllocation = initialArray => {
 const getInitialsNotAllocatedJoinedUnlessPlayingFrame = (notAllocatedInitials, cannotRefInitials) =>
 	notAllocatedInitials.filter(initial => !cannotRefInitials.includes(initial)).join('/');
 
-function selectRef({ playSix, refSix, one, two, three }) {
+function selectRef({ playSix, refSix, one, two, three }, players) {
 	const playedSix = players.find(player => player.initial == playSix);
 	const reffedSix = players.find(player => player.initial == refSix);
 	const playing = [
